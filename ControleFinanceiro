@@ -1,56 +1,55 @@
-package app;
-	//Classe principal do ControleFinanceiro
+package App;
+//Classe principal do ControleFinanceiro
 public class ControleFinanceiro {
-	public static void main(String[] args) {
 	//Atributos
-	private double saldo;
-	
-	//Construtor
-public ControleFinanceiro(double saldoInicial) {
-		this.saldo = saldoInicial;		
-}
-	
-	//Método para registrar entrada de dinheiro
-	public void registrarEntrada (double valor) {
-		if(valor > 0) {
-			saldo += valor;''
-			System.out.println("Entrada registrada: R$" + valor);
-			
-		}else {
-			System.out.println("Valor inválido para entrada!");
-			
-		}
-	}
-	//Método para registrar saída de dinheiro
-	public void registrarSaida (double valor) {
-		if(Valor > 0 && valor <= saldo) {
-		saldo -= valor;
-		System.out.println("Saída registrada: R$" + valor);
-		}else {
-			System.out.println("Saldo insuficiente ou valor inválido!");
-			
-		}
-	}
-	//Método para exibir saldo atual
-	public void exibirSaldo() {
-		System.out.println("Saldo atual: R$" + saldo);
+		private double saldo;
 		
+		//Construtor
+	public ControleFinanceiro(double saldoInicial) {
+			this.saldo = saldoInicial;		
 	}
-	
-	//Método Main para executar os testes
-public static void main (String[] args) {
-	//Criando um objeto ControleFinanceiro com saldo inicial  de R$ 500
-	ControleFinanceiro controle = new ControleFinanceiro(500);
-	
-	//Testando entradas e saídas
-	
-	controle.exibirSaldo();
-	controle.registrarEntrada(200);
-	controle.registrarSaida(100);
-	controle.registrarSaida(700);
-	controle.exibirSaldo();
-	
+		
+		//Método para registrar entrada de dinheiro
+		public void registrarEntrada (double valor) {
+			if(valor > 0) {
+				saldo += valor;
+				System.out.println("Entrada registrada: R$" + valor);
+				
+			}else {
+				System.out.println("Valor inválido para entrada!");
+				
+			}
+		}
+		//Método para registrar saída de dinheiro
+		public void registrarSaida (double valor) {
+			if(valor > 0 && valor <= saldo) {
+			saldo -= valor;
+			System.out.println("Saída registrada: R$" + valor);
+			}else {
+				System.out.println("Saldo insuficiente ou valor inválido!");
+				
+			}
+		}
+		//Método para exibir saldo atual
+		public void exibirSaldo() {
+			System.out.println("Saldo atual: R$" + saldo);
+			
+		}
+		
+		//Método Main para executar os testes
+	public static void main (String[] args) {
+		//Criando um objeto ControleFinanceiro com saldo inicial  de R$ 500
+		ControleFinanceiro controle = new ControleFinanceiro(500);
+		
+		//Testando entradas e saídas
+		
+		controle.exibirSaldo();
+		controle.registrarEntrada(200);
+		controle.registrarSaida(100);
+		controle.registrarSaida(700);
+		controle.exibirSaldo();
+		
 
 	}
-	}
 }
+	
